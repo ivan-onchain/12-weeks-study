@@ -1,0 +1,6 @@
+[submodule "week-01/Solidity-Speed-Quiz/lib/forge-std"]
+	path = week-01/Solidity-Speed-Quiz/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "week-01/Solidity-Speed-Quiz/lib/openzeppelin-contracts"]
+	path = week-01/Solidity-Speed-Quiz/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
