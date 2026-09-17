@@ -6,6 +6,9 @@ contract IsContract {
     function isContract(address addr) public view returns (bool) {
         // return true if the address has bytecode
         // sidenote: as of EIP-7702, EOAs can have bytecode
-
+        if (addr.code.length == 0){
+          return false;
+        }
+        return true;
     }
 }

