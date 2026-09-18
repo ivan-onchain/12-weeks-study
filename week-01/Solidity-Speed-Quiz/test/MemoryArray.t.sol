@@ -10,12 +10,12 @@ contract MemoryArrayTest is Test {
     function setUp() public {
         c = new MemoryArray();
     }
-   
+
     function test_MemoryArray(uint8 a) public {
-         uint256[] memory arr = c.main(a);
-         assertEq(arr.length, a);
-         for (uint256 i = 0; i < a; i++) {
-             assertEq(arr[i], i);
-         }
+        uint256[] memory arr = c.main(a);
+        assertEq(arr.length, a);
+        for (uint256 i = 0; i < a; i++) {
+            assertEq(arr[i], i);
+        }
     }
-}   
+}

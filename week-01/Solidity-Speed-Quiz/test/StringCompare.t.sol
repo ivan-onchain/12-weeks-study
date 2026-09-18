@@ -30,4 +30,4 @@ contract StringCompareTest is Test {
         bool result = c.compare("Rare Skills", "Rare skills");
         assertEq(result, false);
     }
-}       
+}

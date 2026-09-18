@@ -5,9 +5,13 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {Address} from "@openzeppelin/contracts/utils/Address.sol";
 
 contract YourContract {
+    using Address for address;
+
     function main(address target, address forwarder) public {
         // make the right function call such that YourContract gets 100 tokens
         // you may only modify this function
+        bytes memory targetData = abi.encodeWithSignature("giveTokens(address)", address(this));
+        forwarder.functionCall(abi.encodeWithSignature("forward(address,bytes)", target, targetData));
     }
 }
 

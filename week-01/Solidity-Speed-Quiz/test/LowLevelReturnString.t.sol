@@ -40,7 +40,7 @@ contract LowLevelReturnStringTest is Test {
         string memory result = c.main(address(b));
         assertEq(result, "Goodbye, World!");
     }
-    
+
     function test_LowLevelReturn3() public {
         Baz3 b = new Baz3();
         string memory result = c.main(address(b));

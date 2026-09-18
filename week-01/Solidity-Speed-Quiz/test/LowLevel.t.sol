@@ -24,7 +24,7 @@ contract LowLevelTest is Test {
         f1 = new FooFail();
         f2 = new FooSuccess();
     }
- 
+
     function test_LowLevelRevert() public {
         bool result = c.main(address(f1));
         assertEq(result, false);

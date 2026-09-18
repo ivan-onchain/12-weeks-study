@@ -5,7 +5,6 @@ import {Test, console} from "forge-std/Test.sol";
 import {LowLevelStruct} from "../src/LowLevelStruct.sol";
 
 contract P {
-
     struct Point {
         uint256 x;
         uint256 y;
@@ -46,4 +45,4 @@ contract LowLevelStructTest is Test {
         vm.expectRevert();
         c.main(address(p));
     }
-} 
+}

@@ -16,7 +16,8 @@ contract NoDelegateCallTest is Test {
     }
 
     function test_delegatecall_meaningOfLifeAndEverything() public {
-        (bool ok, bytes memory ret) = address(noDelegateCall).delegatecall(abi.encodeWithSelector(NoDelegateCall.meaningOfLifeAndEverything.selector));
+        (bool ok, bytes memory ret) = address(noDelegateCall)
+            .delegatecall(abi.encodeWithSelector(NoDelegateCall.meaningOfLifeAndEverything.selector));
         assertEq(ok, false);
     }
 }

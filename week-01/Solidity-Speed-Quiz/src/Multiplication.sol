@@ -5,6 +5,6 @@ contract Multiplication {
     function multiply(uint8 rewards, uint8 numDays) public pure returns (uint256 totalRewards) {
         // TODO: Implement the logic to calculate the total rewards, which is
         // the number of rewards multiplied by the number of days.
-        return uint256(rewards * numDays); 
+        return uint256(rewards * numDays);
     }
 }

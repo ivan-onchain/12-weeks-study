@@ -17,6 +17,7 @@ contract ForwarderTest is Test {
     YourContract yourContract;
     Target target;
     ERC20 token;
+
     function setUp() public {
         yourContract = new YourContract();
         token = new RareToken();

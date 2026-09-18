@@ -6,10 +6,11 @@ import {MappingSet} from "../src/MappingSet.sol";
 
 contract MappingSetTest is Test {
     MappingSet c;
+
     function setUp() public {
         c = new MappingSet();
     }
-    
+
     function test_increment3() public {
         c.main();
         assertEq(c.m(3), 1);

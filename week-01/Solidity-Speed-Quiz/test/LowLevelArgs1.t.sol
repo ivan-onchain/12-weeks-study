@@ -34,4 +34,4 @@ contract LowLevelArgs1Test is Test {
         vm.expectRevert();
         c.main(address(s2), 1);
     }
-}   
+}

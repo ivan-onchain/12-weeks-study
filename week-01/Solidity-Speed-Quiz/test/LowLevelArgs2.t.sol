@@ -7,6 +7,7 @@ import {LowLevelArgs2} from "../src/LowLevelArgs2.sol";
 contract Storage {
     uint256 public x;
     uint256 public y;
+
     function rare(uint256 _x, uint256 _y) public {
         x = _x;
         y = _y;
@@ -36,4 +37,4 @@ contract LowLevelArgs2Test is Test {
         vm.expectRevert();
         c.main(address(s2), 1, 2);
     }
-}   
+}

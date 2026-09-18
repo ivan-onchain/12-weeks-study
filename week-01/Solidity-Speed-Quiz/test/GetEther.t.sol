@@ -8,8 +8,7 @@ contract GetEtherTest is Test {
     GetEther getEther;
     HasEther hasEther;
 
-    function setUp() public {
-    }
+    function setUp() public {}
 
     function test_getEther() public {
         vm.deal(address(this), 1 ether);

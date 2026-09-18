@@ -11,5 +11,5 @@ contract StringIndex {
 
         //}
         //return string(bt);
-    } 
+    }
 }

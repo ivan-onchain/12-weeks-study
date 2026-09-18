@@ -23,4 +23,4 @@ contract IsNBitSetTest is Test {
         assertEq(c.main(bytes32(0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd), 1), false);
         assertEq(c.main(bytes32(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00), 2), false);
     }
-}   
+}

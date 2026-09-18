@@ -6,9 +6,11 @@ import {TryCatchSimple, IERC20} from "../src/TryCatchSimple.sol";
 
 contract GoodToken {
     string private __name;
+
     constructor(string memory _name) {
         __name = _name;
     }
+
     function name() external view returns (string memory) {
         return __name;
     }

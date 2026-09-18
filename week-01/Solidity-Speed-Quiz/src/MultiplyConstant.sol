@@ -2,7 +2,6 @@
 pragma solidity 0.8.28;
 
 contract MultiplyConstant {
-
     uint256 constant five = 5;
 
     function multiply(uint16 x) public pure returns (uint256 fiveTimesX) {

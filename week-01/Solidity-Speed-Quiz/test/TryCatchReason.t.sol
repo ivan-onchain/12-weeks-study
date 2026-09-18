@@ -5,9 +5,7 @@ import {Test} from "forge-std/Test.sol";
 import {TryCatchReason} from "../src/TryCatchReason.sol";
 
 contract Rare1 {
-    function rare(uint256) external {
-
-    }
+    function rare(uint256) external {}
 }
 
 contract Rare2 {

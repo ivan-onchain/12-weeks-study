@@ -23,4 +23,4 @@ contract StorageSetTest is Test {
         (uint256 x) = c.s();
         assertEq(x, 2);
     }
-}   
+}
