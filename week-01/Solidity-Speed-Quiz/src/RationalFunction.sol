@@ -11,9 +11,15 @@ contract RationalFunction {
         // f(3) = 150
         // f(4) = 133
         // f(5) = 125
+        uint first_div;
+        if(((precision / x)* x) < precision ) {
+            first_div = (precision / x) + 1;
+        }else {
+            first_div = precision / x;
+        }
 
-        x = (precision * 1) / (precision * 1 - (precision / x));
+        x = (precision * 10 ** 2) / (precision * 1 - (first_div));
 
-        return x / 10 ** 2;
+        return x;
     }
 }

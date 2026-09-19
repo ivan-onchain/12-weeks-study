@@ -10,6 +10,10 @@ contract NinetyNinePercent {
         // example: x = 32999999999, y = 33333333333 return false
 
         // return true if x >= y * 0.99. But remember, Soliidty does not have floats.
-        return x >= (y * 99 * 10 ** 4) / 99 * 10 ** 4;
+
+        // "x is at least 99% of y" is the same question as "100x is at least 99y",
+        // which needs no fractions at all. The y bound in the comment above is what
+        // guarantees y * 99 cannot overflow.
+        return x * 100 >= y * 99;
     }
 }

@@ -23,6 +23,9 @@ contract ReadStruct {
         // do not redeclare the struct in this contract or
         // reference it in ViewContraclt
 
-        //return(vc.s[1],vc.s[0]);
+        (bool ok, bytes memory data) = a.staticcall(abi.encodeWithSignature("s()"));
+        require(ok, "read failed");
+
+        (y, x) = abi.decode(data, (uint256, uint256));
     }
 }

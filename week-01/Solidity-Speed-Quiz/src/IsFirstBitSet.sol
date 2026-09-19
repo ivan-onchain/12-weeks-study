@@ -8,6 +8,6 @@ contract IsFirstBitSet {
         // for example 0x000....0001 returns true
         // for example 0x000....0010 returns false
 
-        //if (address(x) % 2 != 0) return true;
+        if (uint256(x) % 2 != 0) return true;
     }
 }

@@ -2,7 +2,6 @@
 pragma solidity 0.8.28;
 
 contract Bytes {
-    bytes b;
 
     function main(uint8 z) public returns (bytes memory) {
         // if z = 0, return empty bytes
@@ -13,9 +12,12 @@ contract Bytes {
         // ...
         // etc
 
-        for (uint256 i = 0; i < z; i++) {
-            b = abi.encodePacked(i - 1);
+        bytes memory result = new bytes(z);
+        
+        
+        for (uint8 i = 0; i < z; i++) {
+          result[i] = bytes1(i);
         }
-        return b;
+        return result;
     }
 }

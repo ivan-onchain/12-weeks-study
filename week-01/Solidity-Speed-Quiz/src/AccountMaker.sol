@@ -22,7 +22,10 @@ contract AccountMaker {
         // the salt should be the owner address
         // the value sent to them should be msg.value
 
-        address addr = Create2.deploy(0, bytes32(bytes20(uint160(owner))), type(Account2).creationCode);
-        return addr;
+        // creationCode alone has no constructor argument attached; Account2's
+        // constructor reads owner from bytes appended after the code.
+        bytes memory initCode = abi.encodePacked(type(Account2).creationCode, abi.encode(owner));
+
+        return Create2.deploy(msg.value, bytes32(bytes20(uint160(owner))), initCode);
     }
 }

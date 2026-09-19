@@ -12,9 +12,11 @@ contract RemoveElement {
         // remove the item at index from arr
         // the new array should have a length of arr.length - 1
         // use swap-and-pop to remove the item
-        for (uint256 i = index; i < arr.length; i++) {
-            arr[i] = arr[i + 1];
-        }
+        //for (uint256 i = index; i < arr.length; i++) {
+            //uint aux = arr[i + 1];
+          //  arr[i] = aux;
+        //}
+        arr[index] = arr[arr.length - 1];
         arr.pop();
     }
 }

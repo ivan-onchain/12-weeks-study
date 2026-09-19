@@ -11,10 +11,10 @@ contract LowLevelArgs1 {
         // if the low level call reverts, revert also
 
         // bonus challenge: use an interface and a high level call to accomplish the same task
-        //(bool success, ) = a.call(abi.encodeWithSignature("rare(uint256)",x));
+        (bool success, ) = a.call(abi.encodeWithSignature("rare(uint256)",x));
 
-        //if(success == false) revert();
+        if(success == false) revert();
 
-        Called(a).rare(x);
+        //Called(a).rare(x);
     }
 }

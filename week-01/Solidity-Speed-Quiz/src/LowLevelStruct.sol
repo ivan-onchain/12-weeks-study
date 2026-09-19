@@ -18,12 +18,11 @@ contract LowLevelStruct {
         // revert if the low level call reverts
 
         // bonus challenge: use an interface and a high level call to accomplish the same task
-        //        (bool success, bytes memory data) = a.call(abi.encodeWithSignature("point()"));
+        (bool success, bytes memory data) = a.call(abi.encodeWithSignature("point()"));
+        if(!success) revert();
 
-        //      if(!success) revert();
+        return abi.decode(data, (uint256,uint256));
 
-        //    return abi.decode(data, (uint256,uint256));
-
-        return Called(a).point();
+     //   return Called(a).point();
     }
 }
