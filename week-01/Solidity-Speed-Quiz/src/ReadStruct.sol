@@ -15,7 +15,6 @@ contract ViewContract {
 }
 
 contract ReadStruct {
-    ViewContract vc = new ViewContract(5, 6);
 
     function main(address a) public view returns (uint256 x, uint256 y) {
         // read the struct from ViewContract and return the x and y values

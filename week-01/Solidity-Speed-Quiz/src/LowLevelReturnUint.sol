@@ -13,7 +13,9 @@ contract LowLevelReturnUint {
 
         // bonus challenge: use an interface and a high level call to accomplish the same task
         (bool success, bytes memory data) = a.call(abi.encodeWithSignature("bar()"));
-        return uint256(bytes32(data));
+        return abi.decode(data,(uint256));
+        require(success, "bar() call failed");
+
         //uint x = Called(a).bar();
         //return x;
     }
