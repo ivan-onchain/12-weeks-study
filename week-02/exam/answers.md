@@ -57,7 +57,14 @@ When I run the storageInspect of foundry I found the inital storage slot of A_Pa
 | -------- | --------   | ----     | ----       | ----                        | ------ |
 | B_Dynamic| name       | string   | 32         |8                            | 0      |
 | -------- | --------   | ----     | ----       | ----                        | ------ |
-| B_Dynamic| decimals   | uint8    | 1          |8                            | 0      |
+| B_Dynamic| decimals   | uint8    | 1          |9                            | 0      |
 |
-|
-|
+
+- Balances[user] is sload(keccak256(abi.encode(user, 1)) )
+- ids[3] is sload(keccak256(abi.encode(5)) + 2
+- positions[user][7].debt is sload(keccak256(abi.encode(7, keccak256(abi.encode(user,6)))))
+- history[2].owner is sload(keccak256(abi.encode(7))+ 1)
+
+- Dónde quedan los datos de name cuando mide menos de 32 bytes:
+  They will live in the slot base . The string is padded to the left until 31 bytes and the length would the the rightest bytes.
+, y dónde cuando mide 32 o más: The length of the string is stored in the slot base and the content of the string is stored in the hash of the slot base of the string declaration. If the string is larger that 32bytes the rest is stored in the hash of the slot base + 1. If the string lenght is greater than 64 the hash of the slot base + 2 will be filled and so on.
