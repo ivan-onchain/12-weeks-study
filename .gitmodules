@@ -7,3 +7,6 @@
 [submodule "week-02/delegatecall-sandbox/lib/forge-std"]
 	path = week-02/delegatecall-sandbox/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "week-02/exam/week-02-exam/lib/forge-std"]
+	path = week-02/exam/week-02-exam/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
