@@ -6,6 +6,12 @@ contract ReturnArrayOfUint256 {
         assembly {
             // your code here
             // return an array of [a,b,c]
+            mstore(0, 32)
+            mstore(32, 3)
+            mstore(64, calldataload(4))
+            mstore(96, calldataload(36))
+            mstore(128, calldataload(68))
+            return(0,160)
         }
     }
 }

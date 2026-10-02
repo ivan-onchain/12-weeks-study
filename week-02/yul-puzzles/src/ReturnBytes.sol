@@ -6,6 +6,11 @@ contract ReturnBytes {
         assembly {
             // your code here
             // encode a and b `abi.encode(a,b)` and return it.
+            mstore(0,32)
+            mstore(32,64)
+            mstore(64,a)
+            mstore(96,b)
+            return(0,128)
         }
     }
 }

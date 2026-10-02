@@ -6,6 +6,10 @@ contract ReturnOppositeBool {
         assembly {
             // your code here
             // return the opposite of `_bool`
+            calldatacopy(0,4,32)
+            let opposite := xor(mload(0),1)
+            mstore(0,opposite)
+            return (0,32)
         }
     }
 }

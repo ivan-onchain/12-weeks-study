@@ -6,6 +6,9 @@ contract ReturnTwoBools {
         assembly {
             // your code here
             // return the tuple (a,b)
+            mstore(0, calldataload(4))
+            mstore(32, calldataload(36))
+            return(0, 64)
         }
     }
 }

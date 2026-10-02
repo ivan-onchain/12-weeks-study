@@ -6,6 +6,11 @@ contract ReturnString {
         assembly {
             // your code here
             // return the exact string: `Hello, RareSkills`
+            mstore(0, 32)
+            mstore(32, 17)
+            mstore(64, "Hello, RareSkills")
+
+            return(0,96)
         }
     }
 }
