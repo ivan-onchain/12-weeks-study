@@ -6,8 +6,9 @@ contract OptimizedArraySort {
         uint256 dataLen = data.length;
 
         for (uint256 i = 0; i < dataLen;) {
+            uint256 iValue = data[i];
             uint256 minIndex = i;
-            uint256 minValue = data[i];
+            uint256 minValue = iValue;
 
             for (uint256 j = i+1; j < dataLen;) {
                 if (data[j] < minValue) {
@@ -20,7 +21,7 @@ contract OptimizedArraySort {
             }
 
             if (minIndex != i) {
-                data[minIndex] = data[i];
+                data[minIndex] = iValue;
                 data[i] = minValue;
             }
             unchecked {
