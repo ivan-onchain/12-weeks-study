@@ -23,9 +23,7 @@ contract OptimizedVote {
 
     function createProposal(bytes32 _name) external {
         proposals[c] = Proposal({voteCount: 0, ended: false, name: _name});
-        unchecked {
-            ++c;
-        }
+        ++c;
         // proposals.push(Proposal({voteCount: 0, name: _name, ended: false}));
     }
 
@@ -34,9 +32,7 @@ contract OptimizedVote {
         voters[msg.sender].vote = _proposal;
         voters[msg.sender].voted = true;
 
-        unchecked {
-            proposals[_proposal].voteCount += 1;
-        }
+        proposals[_proposal].voteCount += 1;
     }
 
     function getVoteCount(uint8 _proposal) external view returns (uint8) {
