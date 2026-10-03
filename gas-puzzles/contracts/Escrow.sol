@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.15;
 
-import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 contract CreateEscrowContract {}
 
@@ -27,16 +27,16 @@ contract Escrow is ReentrancyGuard {
     }
 
     modifier onlyArbiter() {
-        require(msg.sender == arbiter, 'only arbiter');
+        require(msg.sender == arbiter, "only arbiter");
         _;
     }
 
     function buyerDeposit() public payable nonReentrant {
         require(
             msg.sender == buyer,
-            'you are not the buyer, you cannot deposit'
+            "you are not the buyer, you cannot deposit"
         );
-        require(alreadyDeposited == false, 'you cannot deposit twice');
+        require(alreadyDeposited == false, "you cannot deposit twice");
         depositDate = block.timestamp;
     }
 
@@ -55,11 +55,11 @@ contract Escrow is ReentrancyGuard {
     function sellerWithdraw() public {
         require(
             msg.sender == seller,
-            'you are not the seller, you cannot withdraw'
+            "you are not the seller, you cannot withdraw"
         );
         require(
             arbiterUnlocked || block.timestamp > expiration,
-            'arbiter has not unlocked'
+            "arbiter has not unlocked"
         );
         payable(seller).transfer(address(this).balance);
     }

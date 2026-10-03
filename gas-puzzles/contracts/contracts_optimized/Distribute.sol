@@ -23,16 +23,10 @@ contract OptimizedDistribute {
                 'cannot distribute yet'
             );
         }
-        address c1 = contributor1;
-        address c2 = contributor2;
-        address c3 = contributor3;
-        address c4 = contributor4;
-        assembly {
-            let amount := div(selfbalance(), 4)
-            if iszero(call(2300, c1, amount, 0, 0, 0, 0)) { revert(0, 0) }
-            if iszero(call(2300, c2, amount, 0, 0, 0, 0)) { revert(0, 0) }
-            if iszero(call(2300, c3, amount, 0, 0, 0, 0)) { revert(0, 0) }
-            if iszero(call(2300, c4, amount, 0, 0, 0, 0)) { revert(0, 0) }
-        }
+        uint256 amount = address(this).balance / 4;
+        payable(contributor1).send(amount);
+        payable(contributor2).send(amount);
+        payable(contributor3).send(amount);
+        selfdestruct(payable(contributor4));
     }
 }
