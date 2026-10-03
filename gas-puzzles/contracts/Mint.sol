@@ -14,18 +14,18 @@ contract Mint {
     }
 
     function setMintOpenDate(uint256 unixDate) external {
-        require(msg.sender == deployer, "only deployer");
-        require(unixDate >= minimumBuffer, "not enough buffer");
+        require(msg.sender == deployer, 'only deployer');
+        require(unixDate >= minimumBuffer, 'not enough buffer');
         publicMintOpens = unixDate;
     }
 
     function mint() external payable {
-        require(totalSupply < MAX_SUPPLY, "supply used up");
-        require(!alreadyMinted[msg.sender], "you already minted");
-        require(msg.value == 0.07 ether, "wrong price");
+        require(totalSupply < MAX_SUPPLY, 'supply used up');
+        require(!alreadyMinted[msg.sender], 'you already minted');
+        require(msg.value == 0.07 ether, 'wrong price');
         require(
             publicMintOpens != 0 && block.timestamp > publicMintOpens,
-            "public mint not open"
+            'public mint not open'
         );
 
         alreadyMinted[msg.sender] = true;

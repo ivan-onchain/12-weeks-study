@@ -21,20 +21,20 @@ contract EscrowV2 {
     function buyerDeposit() public payable {
         require(
             msg.sender == buyer,
-            "you are not the buyer, you cannot deposit"
+            'you are not the buyer, you cannot deposit'
         );
-        require(alreadyDeposited == false, "you cannot deposit twice");
+        require(alreadyDeposited == false, 'you cannot deposit twice');
         depositDate = block.timestamp;
     }
 
     function sellerWithdraw() public {
         require(
             msg.sender == seller,
-            "you are not the seller, you cannot withdraw"
+            'you are not the seller, you cannot withdraw'
         );
         require(
             block.timestamp >= depositDate + duration,
-            "you cannot withdraw yet, you greedy seller. Take it easy"
+            'you cannot withdraw yet, you greedy seller. Take it easy'
         );
         payable(msg.sender).transfer(address(this).balance);
     }

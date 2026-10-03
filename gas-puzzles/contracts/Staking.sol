@@ -14,7 +14,7 @@ contract Staking {
     function stakeEther(uint256 duration) external payable {
         require(
             duration == 1 days || duration == 7 days || duration == 30 days,
-            "not a valid duration"
+            'not a valid duration'
         );
     }
 

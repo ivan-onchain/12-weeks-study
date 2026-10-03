@@ -34,7 +34,7 @@ describe('Distribute', async function () {
         );
         instance = await ContractFactory.deploy(
             [acct1.address, acct2.address, acct3.address, acct4.address],
-            { value: ethers.utils.parseEther("1.00") }
+            { value: ethers.utils.parseEther('1.00') }
         );
 
         await instance.deployed();

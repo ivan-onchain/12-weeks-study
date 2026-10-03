@@ -38,7 +38,7 @@ describe('ArraySort', async function () {
         it('The functions MUST remain non-payable', async function () {
             let error;
             try {
-                await instance.sortArray(PRE_SORTED_ARRAY,{
+                await instance.sortArray(PRE_SORTED_ARRAY, {
                     value: ethers.utils.parseEther('1.00'),
                 });
             } catch (e) {
@@ -56,7 +56,9 @@ describe('ArraySort', async function () {
 
     describe('Gas target', function () {
         it('The functions MUST meet the expected gas efficiency', async function () {
-            const gasEstimate = await instance.estimateGas.sortArray(REVERSE_SORTED_ARRAY);
+            const gasEstimate = await instance.estimateGas.sortArray(
+                REVERSE_SORTED_ARRAY
+            );
 
             logGasUsage(gasEstimate);
 
@@ -74,7 +76,7 @@ describe('ArraySort', async function () {
             const sortedArray = await instance.sortArray(REVERSE_SORTED_ARRAY);
             expect(sortedArray.toString()).to.equal(SORTED_ARRAY_STR);
         });
-        
+
         it('The functions MUST perform as expected', async function () {
             const sortedArray = await instance.sortArray(UNSORTED_ARRAY);
             expect(sortedArray.toString()).to.equal(SORTED_ARRAY_STR);

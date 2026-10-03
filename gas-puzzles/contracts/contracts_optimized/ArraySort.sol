@@ -2,21 +2,23 @@
 pragma solidity 0.8.15;
 
 contract OptimizedArraySort {
-    function sortArray(uint256[] memory data) external pure returns (uint256[] memory) {
+    function sortArray(
+        uint256[] memory data
+    ) external pure returns (uint256[] memory) {
         uint256 dataLen = data.length;
 
-        for (uint256 i = 0; i < dataLen;) {
+        for (uint256 i = 0; i < dataLen; ) {
             uint256 iValue = data[i];
             uint256 minIndex = i;
             uint256 minValue = iValue;
 
-            for (uint256 j = i+1; j < dataLen;) {
+            for (uint256 j = i + 1; j < dataLen; ) {
                 if (data[j] < minValue) {
                     minIndex = j;
                     minValue = data[j];
                 }
                 unchecked {
-                  ++j;
+                    ++j;
                 }
             }
 
@@ -25,10 +27,9 @@ contract OptimizedArraySort {
                 data[i] = minValue;
             }
             unchecked {
-              ++i;
+                ++i;
             }
         }
         return data;
-        
     }
 }
