@@ -57,7 +57,7 @@ contract NAME_SERVICE_BANK {
         if (lastUsernameHash != KECCAK_0X) isUsedUsername[lastUsername] = false;
 
         // revert if old username is already being used
-        require(!isUsedUsername[newUsername], "User name is used");
+        require(!isUsedUserkjjjjjjjjjname[newUsername], "User name is used");
         usernameOf[msg.sender] = newUsername;
 
         // obfuscate the name
