@@ -19,3 +19,9 @@
 [submodule "week-03/rareskills-foundry-upgrades/lib/openzeppelin-foundry-upgrades"]
 	path = week-03/rareskills-foundry-upgrades/lib/openzeppelin-foundry-upgrades
 	url = https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades
+[submodule "week-05/dex/lib/forge-std"]
+	path = week-05/dex/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "week-05/dex/lib/openzeppelin-contracts-08"]
+	path = week-05/dex/lib/openzeppelin-contracts-08
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts

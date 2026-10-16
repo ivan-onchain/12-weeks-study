@@ -22,4 +22,5 @@
 20. Revert on Large Approvals & Transfers: It definitelly would stuck funds because vaults could easily require approval for large amounts.
 21. Code Injection Via Token Name: It shouldn't break any logic of the vault.
 22. Transfer of less than amount: This could break the internal accounting of the vault, because will allow to not transfer that required amount, but transfer only the amount of the user.
-23. ERC-20 Representation of Native Currency: It shouldn't break the vault.
+23. ERC-20 Representation of Native Currency: It shouldn't break the vault
+
