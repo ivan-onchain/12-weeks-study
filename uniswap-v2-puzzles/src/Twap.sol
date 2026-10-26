@@ -37,11 +37,18 @@ contract Twap {
 
     //**       ONE HOUR TWAP START      **//
     function first1HourSnapShot() public {
-        // your code here
+        (,,first1HourSnapShot_TimeStamp) = pool.getReserves();
+        first1HourSnapShot_Price0Cumulative = pool.price0CumulativeLast();
     }
 
     function second1HourSnapShot() public returns (uint224 oneHourTwap) {
         // your code here
+        (,,second1HourSnapShot_TimeStamp) = pool.getReserves();
+        second1HourSnapShot_Price0Cumulative = pool.price0CumulativeLast();
+
+        unchecked {
+            oneHourTwap = uint224((second1HourSnapShot_Price0Cumulative - first1HourSnapShot_Price0Cumulative) / (second1HourSnapShot_TimeStamp - first1HourSnapShot_TimeStamp));
+        }
 
         return oneHourTwap;
     }
@@ -49,11 +56,18 @@ contract Twap {
 
     //**       ONE DAY TWAP START      **//
     function first1DaySnapShot() public {
-        // your code here
+        (,,first1DaySnapShot_TimeStamp) = pool.getReserves();
+        first1DaySnapShot_Price0Cumulative = pool.price0CumulativeLast();
     }
 
     function second1DaySnapShot() public returns (uint224 oneDayTwap) {
         // your code here
+        (,,second1DaySnapShot_TimeStamp) = pool.getReserves();
+        second1DaySnapShot_Price0Cumulative = pool.price0CumulativeLast();
+
+        unchecked {
+            oneDayTwap = uint224((second1DaySnapShot_Price0Cumulative - first1DaySnapShot_Price0Cumulative) / (second1DaySnapShot_TimeStamp - first1DaySnapShot_TimeStamp));
+        }
 
         return (oneDayTwap);
     }

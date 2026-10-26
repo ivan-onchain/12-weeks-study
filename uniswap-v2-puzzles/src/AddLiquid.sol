@@ -23,12 +23,12 @@ contract AddLiquid {
 
           uint amount0 = 1000 * 10**6;
 
-          uint amount1 = (uint(wethReserve) * amount0*10**8)/uint(usdcReserve);
+          uint amount1 = (uint(wethReserve) * amount0)/uint(usdcReserve);
 
           IERC20(usdc).transfer(pool,amount0);
-          IERC20(weth).transfer(pool, amount1/10**8);
+          IERC20(weth).transfer(pool, amount1);
 
-          pair.mint(address(0xb0b));
+          pair.mint(msg.sender);
 
         }
         
